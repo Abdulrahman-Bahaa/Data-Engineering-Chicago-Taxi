@@ -35,7 +35,7 @@ with DAG(
     dbt_job = DbtCloudRunJobOperator(
         task_id="dbt_job",
         dbt_cloud_conn_id="dbt_cloud",
-        job_id="523988",
+        job_id="524033",
     )
 
     # Define the end task
