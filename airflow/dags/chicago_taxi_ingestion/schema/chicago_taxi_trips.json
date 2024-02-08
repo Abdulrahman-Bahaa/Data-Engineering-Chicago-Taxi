@@ -1,0 +1,131 @@
+{
+    "description": "",
+    "labels": {
+        "table_owner": "abdulrahman_bahaa_de",
+        "dag_id": "ingest_chicago_taxi_gcs_to_bq",
+        "schedule_interval": "monthly"
+    },
+    "timePartitioning": {
+        "type": "DAY",
+        "field": "trip_start_timestamp"
+    },
+    "schema": {
+        "fields": [
+            {
+                "name": "unique_key",
+                "mode": "",
+                "type": "STRING"
+            },
+            {
+                "name": "taxi_id",
+                "mode": "",
+                "type": "STRING"
+            },
+            {
+                "name": "trip_start_timestamp",
+                "mode": "",
+                "type": "TIMESTAMP"
+            },
+            {
+                "name": "trip_end_timestamp",
+                "mode": "",
+                "type": "TIMESTAMP"
+            },
+            {
+                "name": "trip_seconds",
+                "mode": "",
+                "type": "INTEGER"
+            },
+            {
+                "name": "trip_miles",
+                "mode": "",
+                "type": "FLOAT"
+            },
+            {
+                "name": "pickup_census_tract",
+                "mode": "",
+                "type": "INTEGER"
+            },
+            {
+                "name": "dropoff_census_tract",
+                "mode": "",
+                "type": "INTEGER"
+            },
+            {
+                "name": "pickup_community_area",
+                "mode": "",
+                "type": "INTEGER"
+            },
+            {
+                "name": "dropoff_community_area",
+                "mode": "",
+                "type": "INTEGER"
+            },
+            {
+                "name": "fare",
+                "mode": "",
+                "type": "FLOAT"
+            },
+            {
+                "name": "tips",
+                "mode": "",
+                "type": "FLOAT"
+            },
+            {
+                "name": "tolls",
+                "mode": "",
+                "type": "FLOAT"
+            },
+            {
+                "name": "extras",
+                "mode": "",
+                "type": "FLOAT"
+            },
+            {
+                "name": "trip_total",
+                "mode": "",
+                "type": "FLOAT"
+            },
+            {
+                "name": "payment_type",
+                "mode": "",
+                "type": "STRING"
+            },
+            {
+                "name": "company",
+                "mode": "",
+                "type": "STRING"
+            },
+            {
+                "name": "pickup_latitude",
+                "mode": "",
+                "type": "FLOAT"
+            },
+            {
+                "name": "pickup_longitude",
+                "mode": "",
+                "type": "FLOAT"
+            },
+            {
+                "name": "pickup_location",
+                "mode": "",
+                "type": "STRING"
+            },
+            {
+                "name": "dropoff_latitude",
+                "mode": "",
+                "type": "FLOAT"
+            },
+            {
+                "name": "dropoff_longitude",
+                "mode": "",
+                "type": "FLOAT"
+            },
+            {
+                "name": "dropoff_location",
+                "mode": "",
+                "type": "STRING"
+            }
+        ]
+    }
+}
