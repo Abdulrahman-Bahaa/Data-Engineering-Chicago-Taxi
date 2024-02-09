@@ -1,9 +1,3 @@
-"""
-Implement a DAG that loads the data from chicago_taxi bigquery table table into a GCS bucket
-This table contains data starting from 2013 till 2024
-Segregate the data into the following heirarchy: chicago_taxi_trips/{year}/{month}.json
-"""
-
 from datetime import datetime
 from airflow import DAG
 from airflow.operators.empty import EmptyOperator

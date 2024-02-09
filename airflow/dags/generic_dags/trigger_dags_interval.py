@@ -1,13 +1,3 @@
-"""
-Implement a DAG that triggers a given dag as parameter DAG at the first day of each month in the given interval as custom trigger parameters
-split the given interval into months and loop through each month to trigger the given DAG with the interval start and end dates as custom trigger parameters
-params={
-            "dag_id": "",
-            "interval_start": "2023-01-01",
-            "interval_end": "2023-12-01",
-        },
-"""
-
 import logging
 from datetime import datetime
 
