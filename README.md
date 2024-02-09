@@ -18,7 +18,6 @@ Transforming the data in BigQuery using SQL and DBT models
 - Use cosmos (Open Source) to be able to view logs and task of the data models pipeline from airflow (instead of dbt UI)
 - Having separate environments for development and production, connecting the `master` branch to the production environment and the `develop` branch to the development environment for the whole services (Airflow Composer, DBT, BigQuery, GCS, CloudBuild, etc.)
 - Incremental load of data from GCS to BigQuery and fill the data models incrementally using dbt
-- Using job tags in dbt to be able to run relevant models together
 - Implement tests in dbt
 - Implement Data quality checks (Great Expectations, SODA, etc..)
 - Repo enhancements (PR checks, contribution process, CODEOWNERS, etc..)
