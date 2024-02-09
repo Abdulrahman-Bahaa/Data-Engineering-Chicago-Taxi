@@ -37,4 +37,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   chicago_taxi:
-    +materialized: table
+    modeling:
+      +materialized: table
+    reporting:
+      +materialized: view
