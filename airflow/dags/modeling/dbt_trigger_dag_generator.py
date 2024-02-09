@@ -8,7 +8,7 @@ from airflow import DAG
 from dags.modeling.config.dbt_job_config import DBT_JOB_ID
 
 DEFAULT_ARGS = {
-    "owner": "airflow",
+    "owner": "Data Management, Abdulrahman Bahaa",
     "depends_on_past": False,
     "email_on_failure": False,
     "email_on_retry": False,
