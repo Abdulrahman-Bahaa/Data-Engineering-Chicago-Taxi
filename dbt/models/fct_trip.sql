@@ -11,6 +11,7 @@ WITH fct_trip AS (
     SELECT
         unique_key,
         taxi_id,
+        company,
         trip_start_timestamp,
         trip_end_timestamp,
         trip_seconds,
