@@ -1,13 +1,9 @@
-"""
-Implement a DAG that triggers a dbt job to run the dim_date model.
-"""
-
-from airflow.providers.dbt.cloud.operators.dbt import (
-    DbtCloudRunJobOperator,
-)
-from airflow.operators.empty import EmptyOperator
-from airflow import DAG
 from datetime import datetime, timedelta
+
+from airflow.operators.empty import EmptyOperator
+from airflow.providers.dbt.cloud.operators.dbt import DbtCloudRunJobOperator
+
+from airflow import DAG
 
 # Define the default arguments for the DAG
 DEFAULT_ARGS = {
