@@ -22,6 +22,7 @@ Transforming the data in BigQuery using SQL and DBT models
 - Implement tests in dbt
 - Implement Data quality checks (Great Expectations, SODA, etc..)
 - Repo enhancements (PR checks, contribution process, CODEOWNERS, etc..)
+- Add airflow Variables file to the repo and connect it with cloudbuild
 - Others
 
 
