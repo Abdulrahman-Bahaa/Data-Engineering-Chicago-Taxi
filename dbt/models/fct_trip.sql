@@ -34,7 +34,9 @@ WITH fct_trip AS (
         dropoff_community_area,
         dim_date.date AS trip_date,
         dim_date.day_name AS trip_day_name,
-        dim_date.day_of_week AS day_of_week
+        dim_date.day_of_week AS day_of_week,
+        dim_date.day_of_month AS day_of_month,
+        dim_date.is_weekend AS is_weekend
     FROM 
         `chicago-illinois-taxi-test-2.chicago_taxi.taxi_trips` trips
     LEFT JOIN
