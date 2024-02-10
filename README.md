@@ -27,5 +27,6 @@ Transforming the data in BigQuery using SQL and DBT models
 
 
 ## Note
-cloudbuild is implemnted in `cloudbuild.yaml` and also from GCP side, but you'll see the builds are failing due to quota issues with GCP.
-Composer Is Running Well
+cloudbuild step for installing requirements to the environment is implemented and working but gives an error when no updates for the packages exist. 
+The error is not critical and the pipeline continues to work as expected, and it can be suppressed by adding checking the output of the bash command in the cloudbuild step and ignoring if the output is this issue `No change in configuration. Must specify a change to configuration.software_configuration.pypi_dependencies`
+This is ignored for now as it's not used in the current project setup, no custom packages required to be installed in the environment.
