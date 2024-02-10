@@ -1,14 +1,14 @@
 steps:
 - name: gcr.io/cloud-builders/gsutil
   id: Sync composer bucket with dags folder.
-  args: ["rsync", "-r", "-d", "./data_platform", "gs://$_DAG_BUCKET/dags"]
+  args: ["rsync", "-r", "-d", "./airflow/dags", "gs://$_DAG_BUCKET/dags"]
 - name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'bash'
   args:
     - '-c'
     - |
       gcloud composer environments update $_COMPOSER_NAME \
-        --update-pypi-packages-from-file airflow_config/requirements.txt \
+        --update-pypi-packages-from-file airflow/config/requirements.txt \
         --location us-east4 --verbosity=debug \
       || exit 1
   id: 'update-composer-env-requirements'
