@@ -1,4 +1,4 @@
-# Data-Engineering-Chicago-Taxi
+# Data Engineering Chicago Taxi
 Data Pipelines with different technologies (BigQuery, Airflow, DBT, CloudBuild, others) for Chicago Taxi Dataset
 
 
@@ -22,11 +22,13 @@ Transforming the data in BigQuery using SQL and DBT models
 - Implement Data quality checks (Great Expectations, SODA, etc..)
 - Repo enhancements (PR checks, contribution process, CODEOWNERS, etc..)
 - Add airflow Variables file to the repo and connect it with cloudbuild
-- Implement Reporting Layer in BigQuery, to be able to drive better insights and performance
 - Others
 
 
-## Note
-cloudbuild step for installing requirements to the environment is implemented and working but gives an error when no updates for the packages exist. 
-The error is not critical and the pipeline continues to work as expected, and it can be suppressed by adding checking the output of the bash command in the cloudbuild step and ignoring if the output is this issue `No change in configuration. Must specify a change to configuration.software_configuration.pypi_dependencies`
-This is ignored for now as it's not used in the current project setup, no custom packages required to be installed in the environment.
+## Notes
+### CloudBuild
+- cloudbuild step for installing requirements to the environment is implemented and working fine
+- It mark a false positive error in the logs `No change in configuration` when no new updated is required in the environment.
+- The error is not critical and the pipeline continues to work as expected
+- It can be suppressed by adding checking the output of the bash command in the cloudbuild step and marking as succeded if the output is `No change in configuration`
+- This is ignored for now as it's not used in the current project setup, no custom packages required to be installed in the environment.
