@@ -15,6 +15,7 @@ Loading the data from GCS to BigQuery
 Transforming the data in BigQuery using SQL and DBT models
 
 ## Enhancements
+- Use Infrastructure as Code (IaC) ex. `Terraform` to create the environment (Composer, BigQuery, GCS, etc.)
 - Use cosmos (Open Source) to be able to view logs and task of the data models pipeline from airflow (instead of dbt UI)
 - Having separate environments for development and production, connecting the `master` branch to the production environment and the `develop` branch to the development environment for the whole services (Airflow Composer, DBT, BigQuery, GCS, CloudBuild, etc.)
 - Incremental load of data from GCS to BigQuery and fill the data models incrementally using dbt

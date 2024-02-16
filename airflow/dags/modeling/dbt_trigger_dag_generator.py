@@ -5,7 +5,7 @@ from airflow.providers.dbt.cloud.operators.dbt import DbtCloudRunJobOperator
 
 from airflow import DAG
 
-from dags.modeling.config.dbt_job_config import DBT_JOB_ID
+from modeling.config.dbt_job_config import DBT_JOB_ID
 
 DEFAULT_ARGS = {
     "owner": "Data Management, Abdulrahman Bahaa",
